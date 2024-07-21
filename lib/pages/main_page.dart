@@ -83,6 +83,15 @@ class MainPage extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedList");
+                  },
+                  child: const Text("animatedList"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
                 GestureDetector(
                   onTap: () {
                     context.pushNamed("hero");

@@ -3,6 +3,7 @@ import 'package:flutter_animation_study/pages/animated_align_page.dart';
 import 'package:flutter_animation_study/pages/animated_container_page.dart';
 import 'package:flutter_animation_study/pages/animated_cross_fade_page.dart';
 import 'package:flutter_animation_study/pages/animated_default_textstyle_page.dart';
+import 'package:flutter_animation_study/pages/animated_list_page.dart';
 import 'package:flutter_animation_study/pages/animated_opacity_page.dart';
 import 'package:flutter_animation_study/pages/animated_positioned_page.dart';
 import 'package:flutter_animation_study/pages/animated_switcher_page.dart';
@@ -124,6 +125,15 @@ final routers = GoRouter(
         },
       ),
     ),
+    //! 리스트 아이템 추가,삭제할때 애니메이션 효과
+    GoRoute(
+      path: "/animatedList",
+      name: "animatedList",
+      pageBuilder: (context, state) => const NoTransitionPage(
+        child: AnimatedListPage(),
+      ),
+    ),
+    //! 다른페이지로 넘어갈때(두 페이지간의) 해당 위젯 애니메이션 효과
     GoRoute(
       path: "/hero",
       name: "hero",
