@@ -35,6 +35,68 @@ class MainPage extends StatelessWidget {
                   },
                   child: const Text("AnimatedContainer"),
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedOpacity");
+                  },
+                  child: const Text("animatedOpacity"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedPositioned");
+                  },
+                  child: const Text("animatedPositioned"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedAlign");
+                  },
+                  child: const Text("animatedAlign"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedCrossFade");
+                  },
+                  child: const Text("animatedCrossFade"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    context.pushNamed("animatedSwitcher");
+                  },
+                  child: const Text("animatedSwitcher"),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    context.pushNamed("hero");
+                  },
+                  child: Hero(
+                    tag: "hero-tag",
+                    child: Image.network(
+                      "https://goyang.s3.ap-northeast-2.amazonaws.com/image/banner.png",
+                      width: 200,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
